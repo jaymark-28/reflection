@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflection</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css"/>
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+    <style>
+#reflection-output{
+     color: rgba(255, 255, 255, 0.807);
+     font-size: 1.2em;
+     background-color: #1f3626;
+     padding: 20px;
+     border-radius: 8px;
+     border: 1px solid #00796b;
+     width: 50%;
+     margin: 20px auto;
+     font-family: Arial, Helvetica, sans-serif;
+     box-shadow: 5px 10px 5px 10px;
+
+}
+h1,h2{
+    font-size: 30px;
+    text-align: center;
+    border-top: 1px solid;
+    width: 50%;
+    margin: 20px auto;
+    border-radius: 25px;
+        }
+</style>
+<body>
+    <h1>Name : Jaymark C. Francisco</h1>
+    <h2>Course :BSIT - GD</h2>
+    
+    <div id="reflection-output"></div>
+
+    
+    <py-script>
+        def write_reflection(lessons_learned):
+            reflection = ""  # Initialize the reflection variable
+            reflection += f"Reflection: {lessons_learned}\n\n"
+            return reflection
+
+        lesson_learned = """
+        The organizers and staff have truly exceeded my expectations. From the moment I arrived, it was clear that a great deal of thought and effort had gone into planning the event. The seamless registration process set a positive tone, and the atmosphere was warm and inviting. I was pleasantly surprised by the level of professionalism and engagement throughout the entire event, which made it feel more like a community gathering than a formal presentation.
+        One of he highlights was the Q&A session, which was particularly exciting because if your answer you get a prize . The opportunity to engage directly with the speaker and ask questions added a personal touch that enhanced the overall experience. Not only were the discussions insightful, but the addition of a prize for those who answered correctly injected an element of fun and competition into the proceedings. It encouraged participation and kept everyone on their toes, eager to contribute to the conversation.
+        The presentation itself was exceptionally well-structured and informative, providing knowledge about cyber and data privacy. In an age where digital threats are increasingly pervasive, the information shared was timely and relevant. The speaker highlighted essential strategies for protecting oneself from cybercriminals, hackers, and data thieves, offering practical tips that anyone can implement in their daily lives. This focus on actionable strategies made the session feel particularly worthwhile, as attendees left not just with awareness of the risks but also with concrete steps to enhance their personal cybersecurity.
+        What truly impressed me was the speaker’s ability to convey complex information in an accessible and engaging manner. His delivery was captivating; he utilized real-world examples and anecdotes that resonated with the audience, making the material relatable and easier to understand. This approach demystified many aspects of cyber safety that can often seem overwhelming to the average person. He effectively communicated the risks associated with internet usage, such as identity theft, phishing scams, and malware attacks, while also emphasizing the importance of vigilance and proactive measures.
+        Furthermore, the interactive nature of the presentation kept everyone engaged. Through polls and discussions, the audience was not only passive listeners but active participants, which enriched the overall experience. The speaker encouraged us to share our own experiences and questions, fostering a sense of community among attendees. This collaborative environment allowed for a deeper exploration of the topics discussed and ensured that various perspectives were considered.
+        Overall, the event was not just educational; it was empowering. It equipped us with the tools we need to navigate the digital world safely. The knowledge gained about cybersecurity and data privacy is essential in today’s technology-driven society, where our personal information is often at risk. Leaving the event, I felt more confident in my ability to protect myself online, and I appreciated the reminder that cybersecurity is a shared responsibility.
+        In the end, this event was a  success with a professionalism and an engaging atmosphere. The organizers and speaker created an environment that was not only informative but also inspiring, motivating attendees to take charge of their digital lives. I left feeling not only informed but also equipped to share this knowledge with others, amplifying the event’s impact beyond just those who attended. This experience about the belief in the importance of ongoing education in the realm of cybersecurity, and I look forward to similar events in the future.
+        """
+        
+        # Get the reflection and display it in the HTML element
+        reflection_output = write_reflection(lesson_learned)
+        document.getElementById("reflection-output").innerText = reflection_output
+    </py-script>
+</body>
+</html>
